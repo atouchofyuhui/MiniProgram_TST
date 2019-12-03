@@ -5,14 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name:'xdou',
+    people:[
+      {
+        name:'xdou',
+        age:18,
+        height:'178'
+      },
+      {
+        name: 'xudou',
+        age: 19,
+        height: '188'
+      },
+      {
+        name: 'xud',
+        age: 20,
+        height: '198'
+      },
+    ],
+    count:0
   },
-
+  addClick: function () {
+     console.log("++"),
+     this.setData({
+       count: ++this.data.count
+     })
+  },
+  subClick: function (count) {
+    console.log("--"),
+      this.setData({
+        count: --this.data.count
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
